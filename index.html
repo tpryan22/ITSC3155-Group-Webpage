@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Bio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
@@ -55,11 +58,98 @@
             </div>
         </div>
     </div>
-    <div class="card">
-        <h2>Jane Smith</h2>
-        <p>Backend Developer</p>
+    <div class="card josh-card">
+        <img src="img/josh-avatar.jpg" alt="Josh Evans" class="bio-photo">
+        <h2>Josh Evans</h2>
+        <p>Software Engineering Student</p>
+        <!-- Scrolling ticker -->
+        <div class="josh-ticker">
+            <div class="josh-ticker-track">
+                <ul>
+                    <li>Python</li>
+                    <li>Swift</li>
+                    <li>React.js</li>
+                    <li>TypeScript</li>
+                    <li>Mobile Apps</li>
+                    <li>Software Engineering</li>
+                </ul>
+            </div>
+        </div>
         <button onclick="toggleBio('bio2')">Show Bio</button>
-        <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
+        <p id="bio2" class="bio">
+            Josh is a computer science student at UNC Charlotte concentrating in
+            software engineering. Outside of class, he builds websites for local
+            businesses, develops mobile apps, and plays basketball at UREC. He
+            enjoys learning new technologies and is passionate about creating
+            innovative solutions to real-world problems.
+        </p>
+        <div class="josh-moodboard">
+            <h3>My Inspirations</h3>
+            <div class="josh-grid">
+                <button
+                    type="button"
+                    class="josh-tile josh-tile--wide josh-tile--fit"
+                    aria-haspopup="dialog"
+                    data-description="As AI continues to evolve, I am inspired by Claude Code's ability to read and write code faster and more efficiently than any human. I take this as a challenge to improve my own coding skills, using Claude Code as a teacher to learn from and as a benchmark to measure my proficiency. I am motivated by AI to push the boundaries of what is possible in software development."
+                >
+                    <img src="img/claude-code-image.webp" alt="">
+                    <span class="josh-tile-label">Claude Code</span>
+                </button>
+                <button
+                    type="button"
+                    class="josh-tile josh-tile--tall"
+                    aria-haspopup="dialog"
+                    data-description="As a child, I was involved in a lot of robotics activities, which sparked my interest in technology and engineering. Watching the movie Big Hero 6 further fueled my passion for technology and innovation, because at such a young age, the main character, Hiro, was able to invent things that seemed impossible. This inspired me to study computer engineering, where I was first exposed to software development and the endless possibilities of what can be created with code."
+                >
+                    <img src="img/big-hero.jpeg" alt="">
+                    <span class="josh-tile-label">Big Hero 6</span>
+                </button>
+                <button
+                    type="button"
+                    class="josh-tile josh-tile--tall"
+                    aria-haspopup="dialog"
+                    data-description="Iron Man inspired me to pursue a career in the technology field because of his resourcefulness and ingenuity. Watching him create his own suit and gadgets from scratch gave me the thought, 'why can't I do that too?' and motivated me to learn how to code and create my own software applications. Iron Man's determination and perseverance in the face of adversity also inspired me to never give up on my goals and to keep pushing forward, no matter what challenges I may face."
+                >
+                    <img src="img/iron-man.webp" alt="">
+                    <span class="josh-tile-label">Iron Man</span>
+                </button>
+                <button
+                    type="button"
+                    class="josh-tile"
+                    aria-haspopup="dialog"
+                    data-description="My family is probably my greatest motivation in life. They have always been there for me, supporting me through life's challenges and celebrating my successes. Being a first-generation college student, I want to show all of my family that anyone can achieve their dreams with hard work and dedication. I want to be a north star for the generations to come, and hopefully inspire them to pursue their passions, and one day go further than I ever could have imagined."
+                >
+                    <img src="img/family-picutre.jpg" alt="">
+                    <span class="josh-tile-label">Family</span>
+                </button>
+                <button
+                    type="button"
+                    class="josh-tile josh-tile--logo"
+                    aria-haspopup="dialog"
+                    data-description="NC State was the college that I always wanted to get into from the time I realized I wanted to become a computer engineer. Knowing that this university was the best public university for engineering in the state of North Carolina, I made it my goal to get accepted into the College of Engineering. In 2023, I reached this goal and was one of the few people from my high school to do so. I have made life-long friends, and made lots of memories that I will cherish forever. I am proud to say that I was a part of the Wolfpack, but my journey did not end there. I am now a student at UNC Charlotte, and a future software engineer."
+                >
+                    <img src="img/wolfpack-logo.svg" alt="">
+                    <span class="josh-tile-label">NC State</span>
+                </button>
+            </div>
+
+            <dialog class="josh-dialog" aria-labelledby="josh-dialog-title">
+                <div class="josh-dialog-inner">
+                    <button
+                        type="button"
+                        class="josh-dialog-close"
+                        aria-label="Close"
+                    >
+                        &times;
+                    </button>
+                    <div class="josh-dialog-media"></div>
+                    <div class="josh-dialog-body">
+                        <h4 id="josh-dialog-title"></h4>
+                        <p></p>
+                    </div>
+                </div>
+            </dialog>
+        </div>
     </div>
     <div class="card">
         <h2>Emily Johnson</h2>
