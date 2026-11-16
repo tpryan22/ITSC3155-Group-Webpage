@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
@@ -151,11 +152,48 @@
             </dialog>
         </div>
     </div>
-    <div class="card">
+    <div class="card josiah-card">
+        <img src="img/josiah-avatar.jpg" alt="Josiah Flowers" class="bio-photo">
         <h2>Josiah Flowers</h2>
         <p>UI/UX Designer</p>
+
+        <div class="josiah-swatches" aria-label="Josiah's color palette">
+            <button type="button" class="josiah-swatch" style="--swatch:#60a5fa" data-hex="#60a5fa" aria-label="Copy #60a5fa"></button>
+            <button type="button" class="josiah-swatch" style="--swatch:#fb7185" data-hex="#fb7185" aria-label="Copy #fb7185"></button>
+            <button type="button" class="josiah-swatch" style="--swatch:#5eead4" data-hex="#5eead4" aria-label="Copy #5eead4"></button>
+            <button type="button" class="josiah-swatch" style="--swatch:#fde68a" data-hex="#fde68a" aria-label="Copy #fde68a"></button>
+            <button type="button" class="josiah-swatch" style="--swatch:#0f172a" data-hex="#0f172a" aria-label="Copy #0f172a"></button>
+        </div>
+        <p class="josiah-swatch-hint" aria-live="polite">Click a swatch to copy its color</p>
+
         <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Josiah is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+        <p id="bio3" class="bio">Josiah is a UI/UX designer with a passion for creating user-friendly interfaces. He believes good design is invisible: when an interface works the way people expect, they never have to think about it. He enjoys turning rough sketches into clean, accessible layouts and pairing with developers to bring them to life.</p>
+
+        <div class="josiah-moodboard">
+            <h3>My Design Inspirations</h3>
+            <div class="josiah-grid">
+                <a href="https://robodogs.org" target="_blank" rel="noopener noreferrer" class="josiah-tile-wide">
+                    <span class="josiah-icon" aria-hidden="true">🤖</span>
+                    <p>Robotics</p>
+                    <small>My former high school robotics team, where I did most of the web and app design</small>
+                </a>
+                <a href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener noreferrer">
+                    <span class="josiah-icon" aria-hidden="true">📷</span>
+                    <p>Photoshop</p>
+                    <small>Photo Editing</small>
+                </a>
+                <a href="https://www.adobe.com/products/illustrator.html" target="_blank" rel="noopener noreferrer">
+                    <span class="josiah-icon" aria-hidden="true">✒️</span>
+                    <p>Illustrator</p>
+                    <small>Vector Graphics</small>
+                </a>
+                <a href="https://www.canva.com" target="_blank" rel="noopener noreferrer" class="josiah-tile-wide">
+                    <span class="josiah-icon" aria-hidden="true">✨</span>
+                    <p>Canva</p>
+                    <small>Quick Graphics & Layouts</small>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 

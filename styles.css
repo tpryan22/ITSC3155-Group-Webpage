@@ -837,3 +837,179 @@ footer {
         transform: none;
     }
 }
+
+.josiah-card {
+    --jo-ink: #0f172a;
+    --jo-sky: #60a5fa;
+    --jo-coral: #fb7185;
+    --jo-mint: #5eead4;
+    --jo-sun: #fde68a;
+
+    font-family: "Space Grotesk", "Segoe UI", sans-serif;
+    border-top: 6px solid var(--jo-sky);
+    /* Dot-grid "canvas" background, like Figma */
+    background-color: #f0f7ff;
+    background-image: radial-gradient(#bfdbfe 1.5px, transparent 1.5px);
+    background-size: 18px 18px;
+}
+
+.josiah-card h2 {
+    position: relative;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    border-bottom: none;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--jo-ink);
+    outline: 2px solid transparent;
+    transition: outline-color 0.2s;
+}
+
+.josiah-card:hover h2 {
+    outline-color: var(--jo-sky);
+}
+
+.josiah-card h2::before,
+.josiah-card h2::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 2px solid var(--jo-sky);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.josiah-card h2::before { top: -5px; left: -5px; }
+.josiah-card h2::after  { bottom: -5px; right: -5px; }
+
+.josiah-card:hover h2::before,
+.josiah-card:hover h2::after {
+    opacity: 1;
+}
+
+.josiah-card .bio-photo {
+    border-color: var(--jo-coral);
+    box-shadow: 6px 6px 0 var(--jo-sky);
+}
+
+.josiah-card .bio {
+    color: #334155;
+}
+
+.josiah-card > button {
+    background: var(--jo-ink);
+    color: white;
+}
+
+.josiah-card > button:hover {
+    background: var(--jo-coral);
+    color: var(--jo-ink);
+}
+
+.josiah-swatches {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 14px 0 6px;
+}
+
+.josiah-swatch {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--swatch);
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.josiah-swatch:hover {
+    background: var(--swatch);
+    transform: translateY(-4px) scale(1.15);
+}
+
+.josiah-swatch:focus-visible {
+    outline: 3px solid var(--jo-ink);
+    outline-offset: 2px;
+}
+
+.josiah-swatch-hint {
+    margin: 0 0 14px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.josiah-moodboard {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border: 2px dashed var(--jo-sky);
+    border-radius: 12px;
+}
+
+.josiah-moodboard h3 {
+    margin: 0 0 16px;
+    font-size: 20px;
+    color: var(--jo-ink);
+}
+
+.josiah-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.josiah-grid a {
+    padding: 14px 8px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: var(--jo-ink);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.josiah-grid a:nth-child(1):hover { border-color: var(--jo-sky); }
+.josiah-grid a:nth-child(2):hover { border-color: var(--jo-coral); }
+.josiah-grid a:nth-child(3):hover { border-color: var(--jo-mint); }
+.josiah-grid a:nth-child(4):hover { border-color: var(--jo-sun); }
+
+.josiah-grid a:hover {
+    transform: translateY(-4px) rotate(-1deg);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.josiah-icon {
+    display: block;
+    font-size: 40px;
+    line-height: 56px;
+}
+
+.josiah-grid p {
+    margin: 6px 0 2px;
+    font-weight: 700;
+}
+
+.josiah-grid small {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .josiah-card h2,
+    .josiah-card h2::before,
+    .josiah-card h2::after,
+    .josiah-grid a,
+    .josiah-swatch {
+        transition: none;
+    }
+}
+
+.josiah-grid .josiah-tile-wide {
+    grid-column: span 2;
+}

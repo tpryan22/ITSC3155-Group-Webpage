@@ -118,3 +118,23 @@ if (joshDialog) {
         }
     });
 }
+
+const josiahHint = document.querySelector(".josiah-swatch-hint");
+
+document.querySelectorAll(".josiah-swatch").forEach((swatch) => {
+    swatch.addEventListener("click", async () => {
+        const hex = swatch.dataset.hex;
+
+        try {
+            await navigator.clipboard.writeText(hex);
+            josiahHint.textContent = `Copied ${hex}!`;
+        } catch (err) {
+            // Clipboard can fail on some browsers or non-secure pages
+            josiahHint.textContent = `Color: ${hex}`;
+        }
+
+        setTimeout(() => {
+            josiahHint.textContent = "Click a swatch to copy its color";
+        }, 2000);
+    });
+});
