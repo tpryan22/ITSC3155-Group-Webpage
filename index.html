@@ -152,17 +152,39 @@
         </div>
     </div>
     <div class="card">
-        <h2>Emily Johnson</h2>
+        <h2>Josiah Flowers</h2>
         <p>UI/UX Designer</p>
         <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+        <p id="bio3" class="bio">Josiah is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
     </div>
 </div>
 
 <!-- Team vision/mission statement section (hidden by default) -->
-<div id="vision" class="container" style="display: none;">
-    <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+<div id="vision" class="container vision" style="display: none;">
+    <section class="mission">
+        <svg class="mission-paths" viewBox="0 0 600 170" aria-hidden="true">
+            <text x="0" y="14">Tim</text>
+            <text x="0" y="79">Josh</text>
+            <text x="0" y="144">Josiah</text>
+            <path class="path path-tim" pathLength="1" d="M0 25 C 220 25, 300 90, 520 90" />
+            <path class="path path-josh" pathLength="1" d="M0 90 L 520 90" />
+            <path class="path path-josiah" pathLength="1" d="M0 155 C 220 155, 300 90, 520 90" />
+            <circle class="goal" cx="540" cy="90" r="14" />
+        </svg>
+        <p class="mission-eyebrow">Our Mission</p>
+        <h2>Different Paths, One Goal</h2>
+        <p class="mission-text">We come from different backgrounds and have unique experiences, but we share the same ultimate goal of making a positive impact in our community and beyond.</p>
+    </section>
+
+    <section class="rules">
+        <h2>Team Rules</h2>
+        <ol class="rules-list">
+            <li>Communicate early. If you're stuck or running late, say so within 24 hours.</li>
+            <li>Work on your own branch, open pull requests, and have someone review your code before merging.</li>
+            <li>Every voice matters. Respect and value each other's opinions and contributions.</li>
+            <li>Don't edit or reformat a teammate's code without their permission.</li>
+        </ol>
+    </section>
 </div>
 
 <script src="script.js"></script> <!-- Link to external JavaScript file -->
